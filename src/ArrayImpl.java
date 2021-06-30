@@ -1,3 +1,4 @@
+
 /**
  * This class provides the implementation of array based collection close to ArrayList from java.util.collections.
  * When the number of elements in the array reaches its current capacity, it automatically doubles its capacity.
@@ -124,17 +125,13 @@ public class ArrayImpl implements Array {
     }
 
     public static void main(String[] args) {
-        ArrayImpl myArray = new ArrayImpl(3);
-        myArray.add('A');
-        myArray.add('B');
-        myArray.add('C');
-        System.out.println(myArray.toString());
+        ArrayImpl myArray = new ArrayImpl();
+        while (myArray.size() < 500000) {
+            myArray.add(Math.random()* 49 + 1);
+        }
         System.out.println(myArray.size);
         myArray.removeByIndex(2);
-        System.out.println(myArray.toString());
-        System.out.println(myArray.contains('D'));
-        myArray.set(3, 'A');
-        System.out.println(myArray.toString());
+        System.out.println(myArray.contains(50));
     }
 }
 

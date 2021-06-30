@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e187d6e-9178-4800-846d-5cbb048e0926" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/DoublyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestNew.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/List Implementations.iml" beforeDir="false" afterPath="$PROJECT_DIR$/List Implementations.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ArrayImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +36,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
@@ -38,7 +47,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.Tests">
     <configuration name="ArrayImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ArrayImpl" />
       <module name="List Implementations" />
@@ -46,8 +55,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DoublyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DoublyLinkedList" />
+      <module name="List Implementations" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestNew" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="List Implementations" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestNew" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="List Implementations" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Tests" />
+        <item itemvalue="JUnit.TestNew" />
+        <item itemvalue="Application.DoublyLinkedList" />
         <item itemvalue="Application.ArrayImpl" />
       </list>
     </recent_temporary>
@@ -77,46 +114,58 @@
       <option name="project" value="LOCAL" />
       <updated>1625047068551</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add set method">
+      <created>1625048427982</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1625048427982</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add interface with operations for arrays" />
     <MESSAGE value="create array implementations with dynamically growing capacity" />
-    <option name="LAST_COMMIT_MESSAGE" value="create array implementations with dynamically growing capacity" />
+    <MESSAGE value="add set method" />
+    <option name="LAST_COMMIT_MESSAGE" value="add set method" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Project_Structure" timestamp="1625040650994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1625040650994" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1625043695944">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1625075063612">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1625043695944" />
-    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1625048393011">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1625075063612" />
+    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1625048427142">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1625048393011" />
-    <state width="1492" height="228" key="GridCell.Tab.0.bottom" timestamp="1625048367279">
+    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1625048427142" />
+    <state width="1493" height="190" key="GridCell.Tab.0.bottom" timestamp="1625085004541">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625048367279" />
-    <state width="1492" height="228" key="GridCell.Tab.0.center" timestamp="1625048367279">
+    <state width="1493" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625085004541" />
+    <state width="1493" height="190" key="GridCell.Tab.0.center" timestamp="1625085004540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="228" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1625048367279" />
-    <state width="1492" height="228" key="GridCell.Tab.0.left" timestamp="1625048367278">
+    <state width="1493" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1625085004540" />
+    <state width="1493" height="190" key="GridCell.Tab.0.left" timestamp="1625085004540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="228" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1625048367278" />
-    <state width="1492" height="228" key="GridCell.Tab.0.right" timestamp="1625048367279">
+    <state width="1493" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1625085004540" />
+    <state width="1493" height="190" key="GridCell.Tab.0.right" timestamp="1625085004541">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="228" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1625048367279" />
+    <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1625085004541" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1625048397719">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1625048397719" />
+    <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1625081313862">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1625081313862" />
   </component>
 </project>
