@@ -3,7 +3,7 @@
  *
  * @author Svitlana Tkachuk
  */
-public interface Array extends Container {
+public interface Array {
     /**
      * This method adds the specified element to the end.
      */
@@ -20,13 +20,13 @@ public interface Array extends Container {
      * This method removes the element at the specified position.
      * @param index The specified position of the element we want to remove.
      */
-    void remove(int index);
+    void removeByIndex(int index);
 
     /**
      * This method removes the specified element.
      * @param element The specified element we want to remove.
      */
-    void remove(Object element);
+    void removeByValue(Object element);
 
     /**
      * This method returns true if the collection contains specified element,
