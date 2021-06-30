@@ -64,18 +64,29 @@ public class ArrayImpl implements Array {
         array = newArray;
     }
 
-    @Override
-    public void add(Object element) {
-        this.array[this.size] = element;
-        this.size++;
+    /**
+     * This method returns the size of collection.
+     * @return The number which represents the size of collection.
+     */
+    public int size() {
+        return size;
     }
 
     @Override
-    public void set(int index, Object element) {
+    public void add(Object element) {
+        add(size(), element);
+    }
+
+    public void add(int index, Object element) {
         if (array.length == size) doubleCapacity();
         if (index < size) System.arraycopy(array, index, array, index + 1, size - index);
         array[index] = element;
         size++;
+    }
+
+    @Override
+    public void set(int index, Object element) {
+        array[index] = element;
     }
 
     @Override
@@ -100,14 +111,30 @@ public class ArrayImpl implements Array {
         return false;
     }
 
+    public String toString() {
+        StringBuilder symbol = new StringBuilder("[");
+        for (int i = 0; i < array.length; i++) {
+            if (i == array.length - 1)
+                symbol.append(array[i]);
+            else
+                symbol.append(array[i]).append(", ");
+        }
+        symbol.append("]");
+        return symbol.toString();
+    }
+
     public static void main(String[] args) {
         ArrayImpl myArray = new ArrayImpl(3);
         myArray.add('A');
         myArray.add('B');
         myArray.add('C');
-        myArray.toString();
-        myArray.set(2, 'F');
-        myArray.toString();
+        System.out.println(myArray.toString());
+        System.out.println(myArray.size);
+        myArray.removeByIndex(2);
+        System.out.println(myArray.toString());
+        System.out.println(myArray.contains('D'));
+        myArray.set(3, 'A');
+        System.out.println(myArray.toString());
     }
 }
 
