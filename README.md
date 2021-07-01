@@ -3,8 +3,11 @@
 Custom implementations of array list and linked list main methods with good perfomance.
 
 Benchmarks on:
+
 java version "1.8.0_60"
+
 Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
+
 Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
 
 Intel Core i5-7200U, 8GB RAM
