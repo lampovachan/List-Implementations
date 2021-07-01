@@ -1,3 +1,4 @@
+package main;
 
 /**
  * This class provides the implementation of array based collection close to ArrayList from java.util.collections.
@@ -5,11 +6,11 @@
  *
  * @author Svitlana Tkachuk
  */
-public class ArrayImpl implements Array {
+public class ArrayListImpl implements ListInterface {
     /**
      * The capacity of the array cannot get any smaller than this value.
      */
-    private final static int MINIMUM_CAPACITY = 16;
+    private static final int MINIMUM_CAPACITY = 16;
 
     /**
      * The current number of elements in the array.
@@ -25,7 +26,7 @@ public class ArrayImpl implements Array {
      * This default constructor creates an instance of a dynamic array with the minimum
      * capacity (16 elements).
      */
-    public ArrayImpl() {
+    public ArrayListImpl() {
         this(MINIMUM_CAPACITY);
     }
 
@@ -36,7 +37,7 @@ public class ArrayImpl implements Array {
      *
      * @param minimumCapacity The minimum initial size of the array.
      */
-    public ArrayImpl(int minimumCapacity) {
+    public ArrayListImpl(int minimumCapacity) {
         int actualSize = MINIMUM_CAPACITY;
         while (actualSize < minimumCapacity) actualSize <<= 1;  // make sure it is a power of two
         this.array = new Object[actualSize];
@@ -55,17 +56,6 @@ public class ArrayImpl implements Array {
     }
 
     /**
-     * This method halves the capacity
-     * when the number of elements drops below 1/4th of its current capacity.
-     */
-    private void halveCapacity() {
-        if (array.length == MINIMUM_CAPACITY) return;  // make sure we don't shrink too much
-        Object[] newArray = new Object[array.length >> 1];  // divide current length by 2
-        System.arraycopy(array, 0, newArray, 0, size);
-        array = newArray;
-    }
-
-    /**
      * This method returns the size of collection.
      * @return The number which represents the size of collection.
      */
@@ -78,28 +68,38 @@ public class ArrayImpl implements Array {
         add(size(), element);
     }
 
+    @Override
     public void add(int index, Object element) {
         if (array.length == size) doubleCapacity();
-        if (index < size) System.arraycopy(array, index, array, index + 1, size - index);
         array[index] = element;
         size++;
     }
 
     @Override
-    public void set(int index, Object element) {
-        array[index] = element;
-    }
-
-    @Override
     public void removeByIndex(int index) {
-        System.arraycopy(array, index + 1, array, index, --size - index);
-        array[size] = null;
-        if (size < array.length >>> 2) halveCapacity();  // less than 1/4th
+        int numMoved = size - index - 1;
+        if (numMoved > 0)
+            System.arraycopy(array, index+1, array, index,
+                    numMoved);
+        array[--size] = null;
     }
 
     @Override
-    public void removeByValue(Object element) {
-
+    public boolean removeByValue(Object element) {
+        if (element == null) {
+            for (int index = 0; index < size; index++)
+                if (array[index] == null) {
+                    removeByIndex(index);
+                    return true;
+                }
+        } else {
+            for (int index = 0; index < size; index++)
+                if (element.equals(array[index])) {
+                    removeByIndex(index);
+                    return true;
+                }
+        }
+        return false;
     }
 
     @Override
@@ -125,10 +125,11 @@ public class ArrayImpl implements Array {
     }
 
     public static void main(String[] args) {
-        ArrayImpl myArray = new ArrayImpl();
-        while (myArray.size() < 500000) {
-            myArray.add(Math.random()* 49 + 1);
-        }
+        ArrayListImpl myArray = new ArrayListImpl();
+        myArray.add('A');
+        myArray.add('B');
+        myArray.add('C');
+        System.out.println(myArray.toString());
         System.out.println(myArray.size);
         myArray.removeByIndex(2);
         System.out.println(myArray.contains(50));

@@ -1,20 +1,22 @@
+package main;
+
 /**
  * This interface defines the invariant methods that all arrays must implement.
  *
  * @author Svitlana Tkachuk
  */
-public interface Array {
+public interface ListInterface {
     /**
      * This method adds the specified element to the end.
      */
     void add(Object element);
 
     /**
-     * This methods sets the element at the specified position.
-     * @param index The specified position where we want to set element.
+     * This methods adds the element at the specified position.
+     * @param index The specified position where we want to add element.
      * @param element The specified element we want to add to the collection.
      */
-    void set(int index, Object element);
+    void add(int index, Object element);
 
     /**
      * This method removes the element at the specified position.
@@ -25,8 +27,9 @@ public interface Array {
     /**
      * This method removes the specified element.
      * @param element The specified element we want to remove.
+     * @return
      */
-    void removeByValue(Object element);
+    boolean removeByValue(Object element);
 
     /**
      * This method returns true if the collection contains specified element,
