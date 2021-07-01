@@ -1,11 +1,0 @@
-
-g
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(“Ê©ºùÿÿÿÿ8œ…ã¥/
-[	java:S106…"9Replace this use of System.out or System.err by a logger.(Ğß¦‚øÿÿÿÿ8Ç”‹ã¥/
-0
-java:S1220""Move this file to a named package.
-V	java:S106‡"9Replace this use of System.out or System.err by a logger.(Šøƒõ8óÃ”ã¥/
-£
-java:S1186f"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒÍ¤£úÿÿÿÿ8œ…ã¥/
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Á…ñã¥/
