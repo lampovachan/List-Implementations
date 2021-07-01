@@ -1,8 +1,5 @@
 # List-Implementations
 
-## Custom implementations of array list and linked list main methods with good perfomance.
-
-
 Benchmarks on:
 
 java version "1.8.0_60"
